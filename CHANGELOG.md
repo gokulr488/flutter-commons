@@ -1,3 +1,12 @@
 ## 0.0.1
-
-* TODO: Describe initial release.
+Added some commonly used widgets and wrappers
+## 0.0.2
+Ported more helper classes and methods. Exposed new APIs
+## 0.0.3
+Export strategy changed. Exposed new APIs
+## 0.0.4
+Exposed new APIs
+## 0.0.5
+Added new util Method for string to long conversion
+## 0.0.6
+BaseScreen updated to hold appBarRightSideWidget

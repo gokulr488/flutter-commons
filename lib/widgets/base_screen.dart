@@ -8,12 +8,14 @@ class BaseScreen extends StatelessWidget {
       required this.headerText,
       required this.child,
       this.drawer,
-      this.floatingActionButton});
+      this.floatingActionButton,
+      this.appBarRightWidget});
   final Widget child;
   final Widget? bottomNavBar;
   final String headerText;
   final Widget? drawer;
   final Widget? floatingActionButton;
+  final Widget? appBarRightWidget;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,12 +28,18 @@ class BaseScreen extends StatelessWidget {
               toolbarHeight: 45,
               iconTheme: IconThemeData(
                   color: Theme.of(context).colorScheme.inversePrimary),
-              title: Text(
-                headerText,
-                style: GoogleFonts.laila(
-                  color: Theme.of(context).colorScheme.onBackground,
-                  fontSize: 20,
-                ),
+              title: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    headerText,
+                    style: GoogleFonts.laila(
+                      color: Theme.of(context).colorScheme.onBackground,
+                      fontSize: 20,
+                    ),
+                  ),
+                  if (appBarRightWidget != null) appBarRightWidget!
+                ],
               ),
             ),
       backgroundColor: Theme.of(context).colorScheme.background,

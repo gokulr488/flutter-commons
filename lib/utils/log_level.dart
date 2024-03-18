@@ -1,0 +1,4 @@
+const String PRINTED_LOG = 'PRINTED_LOG';
+const String TOAST_MESSAGE = 'TOAST_MESSAGE';
+const String POP_UP_MESSAGE = 'POP_UP_MESSAGE';
+const String CONSOLE_LOG = 'CONSOLE_LOG';
