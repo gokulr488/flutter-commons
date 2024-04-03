@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:talos_commons/talos_commons.dart';
 
 class BaseScreen extends StatelessWidget {
   const BaseScreen(
@@ -18,6 +19,7 @@ class BaseScreen extends StatelessWidget {
   final Widget? appBarRightWidget;
   @override
   Widget build(BuildContext context) {
+    currentContext = context;
     return Scaffold(
       drawer: drawer,
       appBar: headerText.isEmpty
