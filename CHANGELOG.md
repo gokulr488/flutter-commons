@@ -10,3 +10,5 @@ Exposed new APIs
 Added new util Method for string to long conversion
 ## 0.0.6
 BaseScreen updated to hold appBarRightSideWidget
+## 0.0.7
+BaseScreen updated to set currentContext
