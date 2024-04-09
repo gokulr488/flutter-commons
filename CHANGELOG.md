@@ -12,3 +12,5 @@ Added new util Method for string to long conversion
 BaseScreen updated to hold appBarRightSideWidget
 ## 0.0.7
 BaseScreen updated to set currentContext
+## 0.0.8
+NumericInput filed controller was commented out

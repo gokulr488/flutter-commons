@@ -3,7 +3,8 @@ import 'package:flutter/services.dart';
 
 class NumericInputField extends StatelessWidget {
   const NumericInputField(
-      {super.key, this.controller,
+      {super.key,
+      this.controller,
       required this.label,
       this.allowDecimal = false,
       this.onChange,
@@ -29,7 +30,7 @@ class NumericInputField extends StatelessWidget {
           initialValue: initialValue,
           readOnly: readOnly,
           onChanged: onChange,
-          // controller: controller,
+          controller: controller,
           decoration: InputDecoration(
             hintStyle: const TextStyle(color: Colors.white),
             labelStyle: TextStyle(
