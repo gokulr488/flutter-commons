@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 
 class DropDown extends StatelessWidget {
   const DropDown(
-      {super.key, required this.onChanged,
+      {super.key,
+      required this.onChanged,
       required this.defaultValue,
       required this.values,
       this.hintText,
       this.containerWidth,
       this.containerHeght,
-      this.dropDownpadding});
+      this.dropDownpadding,
+      this.inputDecoration});
   final Function(dynamic) onChanged;
   final dynamic defaultValue;
   final List<dynamic> values;
@@ -16,6 +18,7 @@ class DropDown extends StatelessWidget {
   final double? containerWidth;
   final double? containerHeght;
   final double? dropDownpadding;
+  final InputDecoration? inputDecoration;
 
   @override
   Widget build(BuildContext context) {
@@ -36,23 +39,25 @@ class DropDown extends StatelessWidget {
             color: Theme.of(context).colorScheme.secondary,
           ),
           iconSize: MediaQuery.of(context).size.width * 0.010,
-          decoration: InputDecoration(
-            contentPadding: EdgeInsets.symmetric(
-              vertical: MediaQuery.of(context).size.height * 0.008,
-              horizontal: MediaQuery.of(context).size.width * 0.008,
-            ),
-            hintStyle: Theme.of(context).textTheme.titleMedium,
-            labelStyle:
-                TextStyle(fontSize: MediaQuery.of(context).size.width * 0.009),
-            labelText: hintText ?? '',
-            // Set border color here
-            border: const OutlineInputBorder(
-              borderSide: BorderSide(
-                color: Colors.blue, // Change this to your desired border color
+          decoration: inputDecoration ??
+              InputDecoration(
+                contentPadding: EdgeInsets.symmetric(
+                  vertical: MediaQuery.of(context).size.height * 0.008,
+                  horizontal: MediaQuery.of(context).size.width * 0.008,
+                ),
+                hintStyle: Theme.of(context).textTheme.titleMedium,
+                labelStyle: TextStyle(
+                    fontSize: MediaQuery.of(context).size.width * 0.009),
+                labelText: hintText ?? '',
+                // Set border color here
+                border: const OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color:
+                        Colors.blue, // Change this to your desired border color
+                  ),
+                ),
+                // You can customize other styling properties here if needed
               ),
-            ),
-            // You can customize other styling properties here if needed
-          ),
           value: defaultValue,
           onChanged: onChanged,
           items: values

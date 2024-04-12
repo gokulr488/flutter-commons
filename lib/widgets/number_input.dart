@@ -10,7 +10,8 @@ class NumericInputField extends StatelessWidget {
       this.onChange,
       this.onClear,
       this.readOnly = false,
-      this.initialValue});
+      this.initialValue,
+      this.inputDecoration});
   final TextEditingController? controller;
   final String label;
   final bool allowDecimal;
@@ -18,6 +19,7 @@ class NumericInputField extends StatelessWidget {
   final void Function()? onClear;
   final bool readOnly;
   final String? initialValue;
+  final InputDecoration? inputDecoration;
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
@@ -31,20 +33,21 @@ class NumericInputField extends StatelessWidget {
           readOnly: readOnly,
           onChanged: onChange,
           controller: controller,
-          decoration: InputDecoration(
-            hintStyle: const TextStyle(color: Colors.white),
-            labelStyle: TextStyle(
-              fontSize: MediaQuery.of(context).size.width * 0.009,
-            ),
-            suffixIcon: onClear != null
-                ? IconButton(
-                    onPressed: onClear,
-                    icon: const Icon(Icons.clear),
-                  )
-                : null,
-            border: const OutlineInputBorder(),
-            labelText: label,
-          ),
+          decoration: inputDecoration ??
+              InputDecoration(
+                hintStyle: const TextStyle(color: Colors.white),
+                labelStyle: TextStyle(
+                  fontSize: MediaQuery.of(context).size.width * 0.009,
+                ),
+                suffixIcon: onClear != null
+                    ? IconButton(
+                        onPressed: onClear,
+                        icon: const Icon(Icons.clear),
+                      )
+                    : null,
+                border: const OutlineInputBorder(),
+                labelText: label,
+              ),
           style: TextStyle(
             fontSize: MediaQuery.of(context).size.width * 0.008,
           ),
