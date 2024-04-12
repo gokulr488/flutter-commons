@@ -11,7 +11,9 @@ class NumericInputField extends StatelessWidget {
       this.onClear,
       this.readOnly = false,
       this.initialValue,
-      this.inputDecoration});
+      this.inputDecoration,
+      this.textFormFieldWidth,
+      this.textFormFieldHeight});
   final TextEditingController? controller;
   final String label;
   final bool allowDecimal;
@@ -20,14 +22,16 @@ class NumericInputField extends StatelessWidget {
   final bool readOnly;
   final String? initialValue;
   final InputDecoration? inputDecoration;
+  final double? textFormFieldWidth;
+  final double? textFormFieldHeight;
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
     return Padding(
       padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.005),
       child: SizedBox(
-        height: screenSize.height * 0.045,
-        width: screenSize.width * 0.164,
+        height: textFormFieldHeight ?? screenSize.height * 0.045,
+        width: textFormFieldWidth ?? screenSize.width * 0.164,
         child: TextFormField(
           initialValue: initialValue,
           readOnly: readOnly,

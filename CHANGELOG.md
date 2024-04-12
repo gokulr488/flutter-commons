@@ -15,5 +15,7 @@ BaseScreen updated to set currentContext
 ## 0.0.8
 NumericInput filed controller was commented out
 ## 0.0.9
-Added ddecoration parameter in NumericInput and DropDown
+Added decoration parameter in NumericInput and DropDown
+## 0.0.10
+Added height,width parameters in NumericInputField 
  
