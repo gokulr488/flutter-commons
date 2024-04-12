@@ -18,4 +18,6 @@ NumericInput filed controller was commented out
 Added decoration parameter in NumericInput and DropDown
 ## 0.0.10
 Added height,width parameters in NumericInputField 
+## 0.0.11
+Added parameters in NumericInputField 
  
