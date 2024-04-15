@@ -24,4 +24,5 @@ Added parameters in NumericInputField
 Added updateLabel method in NumericInputField 
 ## 0.0.13
 Added updateLabel method in NumericInputField updated
- 
+## 0.0.14
+Added updateLabel method in NumericInputField removed 
