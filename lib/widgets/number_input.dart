@@ -42,7 +42,7 @@ class NumericInputField extends StatelessWidget {
           readOnly: readOnly,
           onChanged: onChange,
           controller: controller,
-          decoration: inputDecoration ??
+          decoration: updateLabel(inputDecoration!, label) ??
               InputDecoration(
                 hintStyle: const TextStyle(color: Colors.white),
                 labelStyle: TextStyle(
@@ -69,5 +69,9 @@ class NumericInputField extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  InputDecoration updateLabel(InputDecoration decoration, String newLabel) {
+    return decoration.copyWith(labelText: newLabel);
   }
 }

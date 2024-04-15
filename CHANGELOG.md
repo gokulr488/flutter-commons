@@ -20,4 +20,6 @@ Added decoration parameter in NumericInput and DropDown
 Added height,width parameters in NumericInputField 
 ## 0.0.11
 Added parameters in NumericInputField 
+## 0.0.12
+Added updateLabel method in NumericInputField 
  
