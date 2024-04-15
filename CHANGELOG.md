@@ -22,4 +22,6 @@ Added height,width parameters in NumericInputField
 Added parameters in NumericInputField 
 ## 0.0.12
 Added updateLabel method in NumericInputField 
+## 0.0.13
+Added updateLabel method in NumericInputField updated
  

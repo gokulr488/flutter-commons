@@ -71,7 +71,7 @@ class NumericInputField extends StatelessWidget {
     );
   }
 
-  InputDecoration updateLabel(InputDecoration decoration, String newLabel) {
+  InputDecoration? updateLabel(InputDecoration decoration, String newLabel) {
     return decoration.copyWith(labelText: newLabel);
   }
 }
