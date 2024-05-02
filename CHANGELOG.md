@@ -26,3 +26,5 @@ Added updateLabel method in NumericInputField
 Added updateLabel method in NumericInputField updated
 ## 0.0.14
 Added updateLabel method in NumericInputField removed 
+## 0.0.15
+Added height, width and padding parameters in BuildTextField

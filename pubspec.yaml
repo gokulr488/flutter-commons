@@ -1,6 +1,6 @@
 name: talos_commons
 description: "Commonly used features wrapped in easy to use widgets and functions"
-version: 0.0.14
+version: 0.0.15
 homepage: https://www.autotradetech.com/
 
 environment:
