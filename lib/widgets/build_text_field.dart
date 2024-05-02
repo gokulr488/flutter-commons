@@ -9,6 +9,9 @@ class BuildTextField extends StatelessWidget {
     this.readOnly = false,
     this.initialValue,
     this.labelStyle,
+    this.padding,
+    this.height,
+    this.width,
   });
   final TextEditingController? controller;
   final String label;
@@ -16,14 +19,18 @@ class BuildTextField extends StatelessWidget {
   final bool readOnly;
   final String? initialValue;
   final TextStyle? labelStyle;
+  final EdgeInsetsGeometry? padding;
+  final double? height;
+  final double? width;
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
     return Padding(
-      padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.005),
+      padding:
+          padding ?? EdgeInsets.all(MediaQuery.of(context).size.width * 0.005),
       child: SizedBox(
-        height: screenSize.height * 0.045,
-        width: screenSize.width * 0.164,
+        height: height ?? screenSize.height * 0.045,
+        width: width ?? screenSize.width * 0.164,
         child: TextFormField(
           initialValue: initialValue,
           readOnly: readOnly,
