@@ -28,5 +28,7 @@ Added updateLabel method in NumericInputField updated
 Added updateLabel method in NumericInputField removed 
 ## 0.0.15
 Deps updated
-## 0.0.15
+## 0.0.16
 CHanged Non-standard padding value from CheckBoxWidget
+## 0.0.17
+Added height, width and padding parameters in BuildTextField
