@@ -15,8 +15,7 @@ class CheckBoxWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:
-          padding ?? const EdgeInsets.symmetric(vertical: 10, horizontal: 50),
+      padding: padding ?? const EdgeInsets.all(10),
       child: Row(mainAxisAlignment: MainAxisAlignment.start, children: [
         Text(fieldName,
             style: TextStyle(
