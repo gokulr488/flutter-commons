@@ -32,3 +32,5 @@ Deps updated
 CHanged Non-standard padding value from CheckBoxWidget
 ## 0.0.17
 Added height, width and padding parameters in BuildTextField
+## 0.0.18
+Removed un-necessary argument from button_card

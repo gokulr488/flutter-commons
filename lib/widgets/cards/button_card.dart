@@ -2,18 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:talos_commons/widgets/cards/base_card.dart';
 
 class ButtonCard extends StatelessWidget {
-  const ButtonCard(
-      {super.key,
-      this.text,
-      this.onTap,
-      required this.child,
-      this.height,
-      this.icon});
+  const ButtonCard({super.key, this.text, this.onTap, this.height, this.icon});
   static TextStyle kButtonTextStyle = const TextStyle(
       fontSize: 18, fontWeight: FontWeight.bold, color: Colors.green);
   final String? text;
   final Function? onTap;
-  final Widget child;
   final double? height;
   final IconData? icon;
 
