@@ -24,6 +24,10 @@ abstract class BaseApi {
     'Content-Type': 'application/json; charset=UTF-8'
   };
 
+  void setBearerToken(String token) {
+    header['Authorization'] = 'Bearer $token';
+  }
+
   Future triggerCall() async {
     url = (url ?? ('${hostName ?? HOSTNAME}:${port ?? PORT}'));
     uri = Uri.http(url!, getEndpoint);

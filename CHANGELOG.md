@@ -34,3 +34,5 @@ CHanged Non-standard padding value from CheckBoxWidget
 Added height, width and padding parameters in BuildTextField
 ## 0.0.18
 Removed un-necessary argument from button_card
+## 0.0.19
+Added option to add bearer token to base api
