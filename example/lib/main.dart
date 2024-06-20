@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
-
-import 'package:flutter/services.dart';
-import 'package:talos_commons/talos_commons.dart';
+import 'package:talos_commons/widgets/base_screen.dart';
+import 'package:talos_commons/widgets/build_text_field.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,48 +15,28 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String _platformVersion = 'Unknown';
-  final _talosCommonsPlugin = TalosCommons();
-
-  @override
-  void initState() {
-    super.initState();
-    initPlatformState();
-  }
-
-  // Platform messages are asynchronous, so we initialize in an async method.
-  Future<void> initPlatformState() async {
-    String platformVersion;
-    // Platform messages may fail, so we use a try/catch PlatformException.
-    // We also handle the message potentially returning null.
-    try {
-      platformVersion =
-          await _talosCommonsPlugin.getPlatformVersion() ?? 'Unknown platform version';
-    } on PlatformException {
-      platformVersion = 'Failed to get platform version.';
-    }
-
-    // If the widget was removed from the tree while the asynchronous platform
-    // message was in flight, we want to discard the reply rather than calling
-    // setState to update our non-existent appearance.
-    if (!mounted) return;
-
-    setState(() {
-      _platformVersion = platformVersion;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Plugin example app'),
-        ),
-        body: Center(
-          child: Text('Running on: $_platformVersion\n'),
-        ),
-      ),
+      title: 'Options Genie',
+      theme: ThemeData(
+          useMaterial3: true,
+          colorSchemeSeed: Colors.amber,
+          brightness: Brightness.dark,
+          textTheme: GoogleFonts.openSansTextTheme(
+              ThemeData(brightness: Brightness.dark).textTheme)),
+      home: BaseScreen(
+          headerText: '',
+          child: Padding(
+            padding: const EdgeInsets.all(8),
+            child: Column(children: [
+              BuildTextField(
+                  // width: 300,
+                  label: 'Text Widget',
+                  initialValue: 'Test',
+                  onChanged: (p0) => p0),
+            ]),
+          )),
     );
   }
 }

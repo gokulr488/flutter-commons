@@ -32,25 +32,18 @@ class BuildTextField extends StatelessWidget {
         height: height ?? screenSize.height * 0.045,
         width: width ?? screenSize.width * 0.164,
         child: TextFormField(
-          initialValue: initialValue,
-          readOnly: readOnly,
-          onChanged: onChanged,
-          controller: controller,
-          decoration: InputDecoration(
-            hintStyle: TextStyle(
-              color: Colors.white,
-              fontSize: MediaQuery.of(context).size.width * 0.008,
-            ),
-            border: const OutlineInputBorder(),
-            labelText: label,
-            labelStyle: labelStyle,
-            contentPadding:
-                const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
-          ),
-          style: TextStyle(
-            fontSize: MediaQuery.of(context).size.width * 0.008,
-          ),
-        ),
+            initialValue: initialValue,
+            readOnly: readOnly,
+            onChanged: onChanged,
+            controller: controller,
+            style: Theme.of(context).textTheme.labelMedium,
+            decoration: InputDecoration(
+              border: const OutlineInputBorder(),
+              labelText: label,
+              labelStyle: labelStyle,
+              contentPadding:
+                  const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+            )),
       ),
     );
   }
