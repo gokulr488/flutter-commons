@@ -37,4 +37,6 @@ Removed un-necessary argument from button_card
 ## 0.0.19
 Added option to add bearer token to base api
 ## 0.0.20
-Text Widget FOnt size bug fix
+Text Widget Font size bug fix
+## 0.0.21
+Base API enhanced to support https

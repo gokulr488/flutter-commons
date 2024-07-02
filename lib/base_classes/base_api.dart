@@ -10,13 +10,15 @@ abstract class BaseApi {
   BaseApi(
       {required this.req,
       this.showDefaultError = true,
-      this.skipErrorRespCheck = false});
+      this.skipErrorRespCheck = false,
+      this.isHttps = false});
   CallContext callContext = CallContext();
   String? url;
   late Uri uri;
   Basejson req;
   bool showDefaultError;
   bool skipErrorRespCheck;
+  bool isHttps;
   String? hostName;
   String? port;
 
@@ -30,7 +32,7 @@ abstract class BaseApi {
 
   Future triggerCall() async {
     url = (url ?? ('${hostName ?? HOSTNAME}:${port ?? PORT}'));
-    uri = Uri.http(url!, getEndpoint);
+    uri = isHttps ? Uri.https(url!, getEndpoint) : Uri.http(url!, getEndpoint);
     log('$getOutgressLog Calling: $uri');
     try {
       log('Request: ${req.toRawJson()}');
