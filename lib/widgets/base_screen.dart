@@ -36,7 +36,7 @@ class BaseScreen extends StatelessWidget {
                   Text(
                     headerText,
                     style: GoogleFonts.laila(
-                      color: Theme.of(context).colorScheme.onBackground,
+                      color: Theme.of(context).colorScheme.onSurface,
                       fontSize: 20,
                     ),
                   ),
@@ -44,7 +44,7 @@ class BaseScreen extends StatelessWidget {
                 ],
               ),
             ),
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       body: SafeArea(child: child),
       bottomNavigationBar: bottomNavBar,
       floatingActionButton: floatingActionButton,

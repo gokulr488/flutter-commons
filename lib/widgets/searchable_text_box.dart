@@ -64,28 +64,28 @@ class _SearchableTextBoxState extends State<SearchableTextBox> {
           viewHintText: widget.hintText,
           builder: (context, controller) {
             return SearchBar(
-              textStyle: MaterialStatePropertyAll(
+              textStyle: WidgetStatePropertyAll(
                 TextStyle(
                   fontSize: MediaQuery.of(context).size.width * 0.008,
                 ),
               ),
               surfaceTintColor:
-                  const MaterialStatePropertyAll(Colors.transparent),
-              shadowColor: const MaterialStatePropertyAll(Colors.transparent),
+                  const WidgetStatePropertyAll(Colors.transparent),
+              shadowColor: const WidgetStatePropertyAll(Colors.transparent),
               side: widget.borderSideColor != null
-                  ? MaterialStateProperty.all(BorderSide(
+                  ? WidgetStateProperty.all(BorderSide(
                       width: 0.5,
                       color: widget.borderSideColor!,
                     ))
-                  : MaterialStateProperty.all(null),
-              shape: MaterialStateProperty.all(
+                  : WidgetStateProperty.all(null),
+              shape: WidgetStateProperty.all(
                 const ContinuousRectangleBorder(
                   borderRadius: BorderRadius.all(
                     Radius.circular(8),
                   ),
                 ),
               ),
-              backgroundColor: MaterialStateProperty.all(
+              backgroundColor: WidgetStateProperty.all(
                   widget.searchBarBgColor ??
                       Theme.of(context)
                           .colorScheme

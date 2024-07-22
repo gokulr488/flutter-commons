@@ -40,3 +40,5 @@ Added option to add bearer token to base api
 Text Widget Font size bug fix
 ## 0.0.21
 Base API enhanced to support https
+## 0.0.22
+static analysis improvments
